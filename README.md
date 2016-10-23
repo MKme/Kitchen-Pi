@@ -7,6 +7,14 @@ For now there iis a web page which was originally found here: https://www.youtub
 
 You can find the origfinal documentation in the Web Page folder. Just edit the files to suit your needs.
 
+This is what the web page looks like
 <p align="center">
   <img src="https://github.com/MKme/Kitchen-Pi/blob/master/Images/MKME.org%20Web%20Page%20.PNG" width="700"/>
 </p>
+
+The web page will cycle between YouTube live feeds, display weather and news as well as the colors will
+change by the time of day.
+
+I take no credit for the original page code and is linked in the documentation folder
+
+Eric

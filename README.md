@@ -8,5 +8,5 @@ For now there iis a web page which was originally found here: https://www.youtub
 You can find the origfinal documentation in the Web Page folder. Just edit the files to suit your needs.
 
 <p align="center">
-  <img src="https://cdn.hackaday.io/images/4379221475727265148.jpg" width="700"/>
+  <img src="https://github.com/MKme/Kitchen-Pi/blob/master/Images/MKME.org%20Web%20Page%20.PNG" width="700"/>
 </p>

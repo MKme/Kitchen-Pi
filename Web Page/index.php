@@ -8,42 +8,66 @@ $vol=(isset($_REQUEST['f_vol'])?$_REQUEST['f_vol']:20);
 // multiplier m
 $m=1000;
 
+// LIST OF 8 YOUTUBE LIVESTREAM FEEDS
+
+// MKME TV LIVE
+// https://www.youtube.com/watch?v=04jBi_yHyZw
 $streams[1]['name']="ME";
-$streams[1]['url']="UCfDqotmv53kzbfgqoDdL7NQ";
+//$streams[1]['url']="UCfDqotmv53kzbfgqoDdL7NQ"; // THIS IS THE MKME CHANNEL ID, NEEDS THE VIDEO/STREAM ID
+$streams[1]['url']="04jBi_yHyZw";
 $streams[1]['time']=3300*$m;
 
+// FRANCE 24 live news stream: all the latest news 24/7
+// https://www.youtube.com/watch?v=gq11un3xqsA
 $streams[2]['name']="FN";
 $streams[2]['url']="gq11un3xqsA";
 $streams[2]['time']=3300*$m;
 
+// The Good Life Radio • 24/7 Music Live Stream | Deep & Tropical House | Chill Out | Dance Music Mix
+// https://www.youtube.com/watch?v=uNN6Pj06Cj8
 $streams[3]['name']="M1";
 $streams[3]['url']="uNN6Pj06Cj8";
 $streams[3]['time']=3300*$m;
 
+// UNAVAILABLE
+// https://www.youtube.com/watch?v=mlwVFG10JaU
 $streams[4]['name']="M2";
 $streams[4]['url']="mlwVFG10JaU";
 $streams[4]['time']=3300*$m;
 
+// Mixhound - 24/7 Music Livestream · Chillstep · Melodic Dubstep · House · Chill Music · Futurebass
+// https://www.youtube.com/watch?v=dxVzsVFAw34
 $streams[5]['name']="m3";
 $streams[5]['url']="dxVzsVFAw34";
 $streams[5]['time']=3300*$m;
 
+// Earth From Space: GoPro ISS Spacewalk | ISS HD Stream - Video Replay Of EVA Russian Cosmonauts 2013
+// https://www.youtube.com/watch?v=OlzeBNep6Pw
 $streams[6]['name']="S1";
 $streams[6]['url']="OlzeBNep6Pw";
 $streams[6]['time']=3300*$m;
 
-
+// 24/7 STREAM: 👽🌎 "EARTH FROM SPACE" ♥ NASA #SpaceTalk (2016) ISS HDVR | Subscribe now!
+// https://www.youtube.com/watch?v=UGPuEDyAsU8
 $streams[7]['name']="S2";
 $streams[7]['url']="UGPuEDyAsU8";
 $streams[7]['time']=3300*$m;
 
-
+// NASA TV Public-Education
+// https://www.youtube.com/watch?v=UdmHHpAsMVw
 $streams[8]['name']="S3";
 $streams[8]['url']="UdmHHpAsMVw";
 $streams[8]['time']=3300*$m;
 
-
-
+// TO EDIT FEEDS...
+// $streams[X]['url'] = "[INSERT YOUTUBE CODE HERE]"
+//
+// REFER TO YOUTUBE FOR DIFFERENT LIVESTREAMS: https://www.youtube.com/live
+//
+// EXAMPLES (YOUTUBE CODES)
+// DKAywnK5q1M - Southwest Florida Eagle Cam
+// YPv9yKC76hE - Kitten Academy Live Stream
+// vwREO4Ahv-E - www.deertrail.us
 
 $s=getS($streams);
 $n=$streams[$s]['name'];
@@ -184,7 +208,17 @@ function bg($id){
 
 function getHeadlines(){
     $html="";
-    $file=file_get_contents("http://feeds.bbci.co.uk/news/rss.xml?edition=uk"); 
+    
+    // NEWS FROM RSS FEED 
+    // $file=file_get_contents("http://feeds.bbci.co.uk/news/rss.xml?edition=uk"); // BBC UK
+    
+    // FOR BBC US NEWS, JUST CHANGE THE 'edition' PARAMETER IN THE LINK ABOVE TO 'US'
+    $file=file_get_contents("http://feeds.bbci.co.uk/news/rss.xml?edition=us"); // BBC US
+    
+    // OR TRY OTHER RSS NEWS FEEDS...
+    // http://rss.nytimes.com/services/xml/rss/nyt/World.xml
+    // http://www.cbc.ca/cmlink/rss-world
+    
     preg_match_all("%<title>(.*?)</title>%s", $file, $titles,PREG_PATTERN_ORDER,920);
     preg_match_all("%<link>(.*?)</link>%s", $file, $links,PREG_PATTERN_ORDER,920);
     preg_match_all("%<description>(.*?)</description>%s", $file, $desc,PREG_PATTERN_ORDER,920);

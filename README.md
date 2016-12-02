@@ -7,9 +7,8 @@ The code for the page was originally found here: https://www.youtube.com/watch?v
 
 Thanks to RiquezJP for getting this started for the world! I take no credit for the original page code and is linked in the documentation folder
 
-You can find the original documentation in the Web Page folder. Just edit the files to suit your needs.
-
-The full tutorial can be found on blog.mkme.org
+The full Raspberry Pi Assembly tutorial can be found at http://blog.mkme.org/index.php/raspberry-pi-home-automation/
+You can get all the parts here:  http://store.mkme.org/product-category/raspberrypi/
 
 This is what the web page looks like
 <p align="center">

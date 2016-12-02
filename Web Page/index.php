@@ -17,7 +17,7 @@ $streams[1]['name']="ME";
 $streams[1]['url']="04jBi_yHyZw";
 $streams[1]['time']=3300*$m;
 
-// FRANCE 24 live news stream: all the latest news 24/7
+// A
 // https://www.youtube.com/watch?v=gq11un3xqsA
 $streams[2]['name']="FN";
 $streams[2]['url']="gq11un3xqsA";
@@ -41,7 +41,7 @@ $streams[5]['name']="m3";
 $streams[5]['url']="dxVzsVFAw34";
 $streams[5]['time']=3300*$m;
 
-// Earth From Space: GoPro ISS Spacewalk | ISS HD Stream - Video Replay Of EVA Russian Cosmonauts 2013
+// Updated
 // https://www.youtube.com/watch?v=OlzeBNep6Pw
 $streams[6]['name']="S1";
 $streams[6]['url']="OlzeBNep6Pw";
